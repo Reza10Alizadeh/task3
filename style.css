@@ -1,0 +1,81 @@
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  transition: background-color 0.5s, color 0.5s;
+}
+
+:root {
+  --black: rgb(0, 0, 0);
+  --white: rgb(255, 255, 255);
+  --bg-light: #edeef6;
+  --bg-dark: rgb(30, 30, 30);
+}
+
+body.dark-mode {
+  background-color: var(--bg-dark);
+  color: var(--white);
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 25vh;
+}
+
+.title {
+  color: var(--black);
+  font-size: 45px;
+  margin: 30px;
+  transition: color 0.5s;
+}
+
+body.dark-mode .title {
+  color: var(--white);
+}
+
+.switch {
+  position: relative;
+  width: 200px;
+  height: 60px;
+  border-radius: 65px;
+  background-color: var(--bg-light);
+  display: flex;
+  align-items: center;
+}
+
+body.dark-mode .switch {
+  background-color: var(--black);
+}
+
+.switch-btn {
+  position: absolute;
+  left: 10px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--black);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: left 0.5s, background-color 0.5s;
+}
+
+body.dark-mode .switch-btn {
+  left: 140px;
+  background-color: var(--white);
+}
+
+.switch-btn .fa-moon,
+.switch-btn .fa-sun {
+  color: var(--white);
+}
+
+body.dark-mode .switch-btn .fa-moon,
+body.dark-mode .switch-btn .fa-sun {
+  color: var(--black);
+}
